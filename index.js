@@ -12,7 +12,11 @@ io.on("connection",function(socket){
     console.log("co nguoi zo:" + socket.id );
     socket.on("disconnect", function () {
         console.log(socket.id + "|| da ngat");
-    })
+    });
+
+    socket.on("Client-send-data", function (data) {
+        console.log(data);
+    });
 });
 
 app.get("/", function(req, res){

@@ -15,13 +15,17 @@
 
         var socket = io("http://localhost:3000");
         $(document).ready(function () {
-            alert("hellooo");
-        })
+            // alert("hellooo");
+            $("#mrA").click(function(){
+                // alert("1");
+                socket.emit("Client-send-data","HELLO");
+            });
+        });
     </script>
 </head>
 
 <body>
-    asdhjak
+    <div id="mrA">Click Send</div>
 </body>
 
 </html>
